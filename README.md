@@ -18,10 +18,12 @@ A Python toolkit for analyzing focus quality in microscopy videos. This tool pro
 - Region of Interest (ROI) - Analyze specific cropped regions
 - Playback controls - Pause, resume, save frames, adjust speed
 # Installation
-# Using Conda (Recommended) 
+### Using Conda (Recommended) 
 Clone the repository
 ``` bash
-#clone the repository 
 git clone https://github.com/san-ban007/Nematode-Focus-Measure.git
-cd video-focus-analyzer
+```
+### Create conda environment
+``` bash
+conda env create -f environment.yml
 ```
