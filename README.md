@@ -12,3 +12,7 @@ A Python toolkit for analyzing focus quality in microscopy videos. This tool pro
     - Side-by-side video and graph display
     - Overlay graph on video
     - Plot focus vs. time or frame number
+- Automated focal stack detection - Identifies peak focus frames
+- Auto-save functionality - Save plots at regular intervals during long recordings
+- Region of Interest (ROI) - Analyze specific cropped regions
+- Playback controls - Pause, resume, save frames, adjust speed
