@@ -27,3 +27,5 @@ git clone https://github.com/san-ban007/Nematode-Focus-Measure.git
 ``` bash
 conda env create -f environment.yml
 ```
+### Activate environment
+```
