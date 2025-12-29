@@ -1,3 +1,4 @@
+
 # Nematode-Focus-Measure
 A Python toolkit for analyzing focus quality in microscopy videos. This tool processes videos frame-by-frame to compute focus measures, helping identify focal stacks and track focus changes over time. Particularly useful for microscopy, time-lapse imaging, and any application where maintaining or analyzing focus is critical. 
 # Features
@@ -16,3 +17,10 @@ A Python toolkit for analyzing focus quality in microscopy videos. This tool pro
 - Auto-save functionality - Save plots at regular intervals during long recordings
 - Region of Interest (ROI) - Analyze specific cropped regions
 - Playback controls - Pause, resume, save frames, adjust speed
+# Installation
+# Using Conda (Recommended)
+''' bash 
+# Clone the repository
+git clone https://github.com/san-ban007/Nematode-Focus-Measure.git
+cd video-focus-analyzer
+'''
