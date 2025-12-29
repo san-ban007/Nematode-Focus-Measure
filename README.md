@@ -3,12 +3,12 @@ A Python toolkit for analyzing focus quality in microscopy videos. This tool pro
 # Features
 - Real-time focus analysis-Display video alongside live focus measure graphs
 - Multiple focus measure algorithms
-  - Variance ofLaplacian (default)
-  - Tenengrad (gradient-based)
-  - Normalized Variance
-  - Modified Laplacian
-  - Sum Modified Laplacian
+    - Variance ofLaplacian (default)
+    - Tenengrad (gradient-based)
+    - Normalized Variance
+    - Modified Laplacian
+    - Sum Modified Laplacian
 - Flexible visualization options:
-  - Side-by-side video and graph display
-  - Overlay graph on video
-  - Plot focus vs. time or frame number
+    - Side-by-side video and graph display
+    - Overlay graph on video
+    - Plot focus vs. time or frame number
