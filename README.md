@@ -28,4 +28,60 @@ git clone https://github.com/san-ban007/Nematode-Focus-Measure.git
 conda env create -f environment.yml
 ```
 ### Activate environment
+```bash
+conda activate nematode_env
+```
+# Quick Start
+### Basic Usage - Simple Analysis
+Analyze a video and display focus measure plots:
+```bash
+python simple_example.py your_video.mp4
+```
+This will:
+- Process all frames in the video
+- Display two plots (focus vs. frame number and focus vs. time)
+- Detect and mark focal stack peaks
+- Show the best focus frames
+
+### Advanced Usage - Live Video Display
+Display video with real-time focus graph:
+```bash
+python video_ with _graph.py your_ video.mp4
+```
+#### Usage Examples
+Overlay graph on video
+```bash
+python video_with_graph.py video.mp4 --overlay
+```
+Plot focus vs frame number instead of time
+```bash
+python video_ with _graph.py video.mp4 --plot-type frame
+```
+Auto-save plots every minute
+```bash
+python video_with_graph.py video.mp4 --save-interval 1.0
+```
+Plots are saved to a (processed/) folder next to your video, organized by video name and timestamp.
+
+Analyze specific region (crop to center quarter)
+```bash
+python video_ with _graph.py video.mp4 --crop-width-factor 4 --crop-height-factor 4
+```
+Try different focus measure methods
+```bash
+python video_ with _graph.py video.mp4 --method modified _laplacian
+python video_ with _graph.py video.mp4 --method tenengrad
+```
+Speed up processing (process every 3rd frame)
+```bash
+python video_ with _graph.py video.mp4 --downsample 3
+```
+Complete example: cropped region with auto-save
+```bash
+python video_ with _graph.py video.mp4 \
+--crop-width-factor 2 \
+--crop-height-factor 2 \
+--overlay\
+--save-interval 1.0 \
+--downsample 3
 ```
