@@ -1,0 +1,11 @@
+name: nematode_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy>=1.19.0
+  - matplotlib>=3.3.0
+  - pip
+  - pip:
+    - opencv-python>=4.5.0
