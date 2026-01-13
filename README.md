@@ -89,11 +89,11 @@ python video_ with _graph.py video.mp4 \
 ### Event-Annotated Analysis
 
 For videos with corresponding CSV event logs, use video_with_graph_annotated_shaded.py to visualize focus changes alongside experimental events with color-coded shaded regions.
-Usage
+#### Usage
 ```bash
-python video_with_graph_annotated2_shaded.py video.mp4 --csv events.csv --save-interval 1.0
+python video_with_graph_annotated_shaded.py video.mp4 --csv events.csv --save-interval 1.0
 ```
-CSV Format
+#### CSV Format
 The script expects a CSV with columns: elapsed_time, event, details
 Supported event pairs (automatically creates shaded regions):
 
@@ -103,7 +103,7 @@ x_move_start / x_move_end → Yellow shading
 focus_down_start / focus_down_end → Red shading (solid boundaries)
 focus_up_start / focus_up_end → Blue shading (solid boundaries)
 
-Features
+#### Features
 
 Automatic event pairing from CSV timestamps
 Color-coded shaded regions with boundary lines
