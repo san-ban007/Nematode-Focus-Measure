@@ -109,3 +109,41 @@ Automatic event pairing from CSV timestamps
 Color-coded shaded regions with boundary lines
 Legend in saved plots (clean live view without legend)
 Supports all standard options: --crop-width-factor, --downsample, --method, etc.
+
+### Peak Focus Clip Extractor
+
+`extract_peak_focus.py` automatically extracts short video clips around the best-focus moment in each focus sweep. It reads the CSV event log to identify all focus sweep ranges (`focus_up`, `focus_down`, and `first_focus_down` events), computes the focus measure frame-by-frame within each range, locates the peak, and uses ffmpeg to extract a clip centred on that peak.
+
+#### Usage
+
+```bash
+# Basic usage — 2s clips around each focus peak
+python extract_peak_focus.py video.mp4 --csv events.csv
+```
+# 1s clips with custom output directory and focus data export
+python extract_peak_focus.py video.mp4 --csv events.csv -o output_folder/ --duration 1.0 --save-csv
+
+# With centre-crop and focus plot
+python extract_peak_focus.py video.mp4 --csv events.csv --crop-width-factor 4 --crop-height-factor 4 --plot
+```
+
+### Options
+
+| Flag | Description |
+|------|-------------|
+| `--csv` | Path to CSV event file (required) |
+| `-o`, `--output-dir` | Output directory for clips (default: `<video>_peak_clips/`) |
+| `-m`, `--method` | Focus measure: `laplacian`, `tenengrad`, `variance`, `modified_laplacian`, `sum_modified_laplacian` |
+| `-t`, `--duration` | Clip length in seconds around each peak (default: `2.0`) |
+| `--crop-width-factor` | Centre-crop width divisor for focus measurement (default: `1`) |
+| `--crop-height-factor` | Centre-crop height divisor for focus measurement (default: `1`) |
+| `--plot` | Save a PNG plot of all focus sweeps with peaks annotated |
+| `--save-csv` | Export per-frame focus values for all ranges |
+
+### Requirements
+
+Requires `ffmpeg` installed in your environment:
+
+```bash
+conda install -c conda-forge ffmpeg
+```
