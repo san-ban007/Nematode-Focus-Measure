@@ -119,7 +119,7 @@ Supports all standard options: --crop-width-factor, --downsample, --method, etc.
 ```bash
 # Basic usage — 2s clips around each focus peak
 python extract_peak_focus.py video.mp4 --csv events.csv
-```
+
 # 1s clips with custom output directory and focus data export
 python extract_peak_focus.py video.mp4 --csv events.csv -o output_folder/ --duration 1.0 --save-csv
 
